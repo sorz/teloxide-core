@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- `errors` module and `errors::AsResponseParameters` trait
 - `EditedMessageIsTooLong` error [#109][pr109]
 - `UntilDate` enum and use it for `{Restricted, Banned}::until_date` ([#116][pr116])
 - `Limits::messages_per_min_channel` ([#121][pr121])
