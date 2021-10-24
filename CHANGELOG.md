@@ -19,6 +19,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- `RequestError::RetryAfter` now has a `u32` field instead of `i32`
 - Use `url::Url` for urls, use `chrono::DateTime<Utc>` for dates in types ([#115][pr115])
 - Mark `ApiError` as `non_exhaustive` ([#125][pr125])
 
