@@ -10,6 +10,7 @@ use crate::{
 ///
 /// [JSON]: https://core.telegram.org/bots/api#making-requests
 #[must_use = "requests do nothing until sent"]
+#[derive(Clone)]
 pub struct JsonRequest<P> {
     bot: Bot,
     payload: P,
