@@ -147,6 +147,15 @@ impl MessageEntity {
         }
     }
 
+    /// Create a message entity representing a custom emoji.
+    pub const fn custom_emoji(custom_emoji_id: String, offset: usize, length: usize) -> Self {
+        Self {
+            kind: MessageEntityKind::CustomEmoji { custom_emoji_id },
+            offset,
+            length,
+        }
+    }
+
     pub fn kind(mut self, val: MessageEntityKind) -> Self {
         self.kind = val;
         self
@@ -285,6 +294,7 @@ pub enum MessageEntityKind {
     Underline,
     Strikethrough,
     Spoiler,
+    CustomEmoji { custom_emoji_id: String },
 }
 
 #[cfg(test)]
